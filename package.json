@@ -1,0 +1,25 @@
+{
+  "name": "typescript-socket.io",
+  "version": "1.0.0",
+  "description": "后台的模板",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "guojiangbuguo",
+  "license": "ISC",
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.2.1"
+  },
+  "dependencies": {
+    "@types/node": "^10.12.10",
+    "@types/node-uuid": "0.0.28",
+    "@types/string-format": "^2.0.0",
+    "@types/uuid": "^3.4.4",
+    "node-uuid": "^1.4.8",
+    "string-format": "^2.0.0"
+  }
+}
