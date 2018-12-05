@@ -1,4 +1,5 @@
-import {ParamItem, ExcuteTemplate, ExcuteTemplateMgr} from './excute'
+import {SocketManager} from './rpcmgr'
+import * as ReadLine from 'readline'
 class Hello
 {
     constructor()
@@ -12,18 +13,21 @@ class Hello
     }
 }
 
-let mgr = new ExcuteTemplateMgr();
-mgr.loadFromPath('./dist/mgr.json')
-let tmp = new ExcuteTemplate('ping', 'ping');
-let param = new ParamItem();
-param.name = 'site';
-param.param = 'www.baidu.com';
-param.prefix = '-t'
-param.required = true;
-tmp.Param.push(param);
-
-mgr.appendScript(tmp);
-
-mgr.saveToPath('./dist/mgr2.json')
 let obj = new Hello();
 obj.savHello();
+
+
+const sm = new SocketManager();
+
+
+const rl = ReadLine.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+  
+  rl.question('你认为 Node.js 中文网怎么样', (answer:any) => {
+    // 对答案进行处理
+    console.log(`多谢你的反馈：${answer}`);
+  
+    rl.close();
+  });

@@ -17,9 +17,11 @@
   "dependencies": {
     "@types/node": "^10.12.10",
     "@types/node-uuid": "0.0.28",
+    "@types/socket.io": "^2.1.0",
     "@types/string-format": "^2.0.0",
     "@types/uuid": "^3.4.4",
     "node-uuid": "^1.4.8",
+    "socket.io": "^2.2.0",
     "string-format": "^2.0.0"
   }
 }

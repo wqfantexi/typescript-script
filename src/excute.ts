@@ -110,4 +110,10 @@ export class ExcuteTemplateMgr {
         const fileContent = JSON.stringify(this, null, 4);
         fs.writeFileSync(jsonPath, fileContent);
     }
+
+    runScript(caller: any, callback: Function){
+        this.ArrScript.forEach((item)=>{
+            item.runScript(caller, callback);
+        });
+    }
 }
